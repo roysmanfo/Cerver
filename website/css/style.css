@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --blob-height: 400px;
+    --blob-width: 500px;
+    --blob-border-radius: 150px;
+    --blob-y-offset: -8rem;
+    --blob-x-offset: -7rem;
+
+    --blob-color-1: #b728284f;
+    --blob-color-2: #272a974f;
+    --blob-color-3: #7d27974f;
+
+    --blob-anim-delay: 1s;
+}
+
+@keyframes fade {
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main{
+    text-align: center;
+    padding: 1rem 3rem;
+    background: transparent;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+}
+
+main section{
+    position: relative;
+    width: min-content;
+}
+
+main .blob {
+    position: absolute;
+    z-index: -1;
+    height: var(--blob-height);
+    width: var(--blob-width);
+    border-radius: var(--blob-border-radius);
+    transform: translateY(3rem);
+}
+
+main .blob1 {
+    top: var(--blob-y-offset);
+    left: var(--blob-x-offset);
+    background: radial-gradient(var(--blob-color-1), transparent 70%);
+}
+main .blob2 {
+    bottom: var(--blob-y-offset);
+    right: var(--blob-x-offset);
+    background: radial-gradient(var(--blob-color-2), transparent 70%);
+}
+main .blob3 {
+    bottom: calc(-1 * var(--blob-y-offset));
+    right: var(--blob-x-offset);
+    background: radial-gradient(var(--blob-color-3), transparent 70%);
+}
+
+main h1{
+    font-size: 8em;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+main p{
+    color: #ccc;
+    font-weight: 600;
+}
+
+footer{
+    color: #999;
+}
+
+footer a {
+    color: rgb(87, 126, 209);
+    font-weight: 700;
+    text-decoration: none;
+}

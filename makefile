@@ -51,7 +51,7 @@ run: $(TARGET)
 	@cd $(WEB_DIR)
 	@$(TARGET) $(ARGS)
 
-# Clean build art@ifacts
+# Clean build artifacts
 clean:
 	@if exist $(BUILD_DIR) rmdir /S /Q $(BUILD_DIR)
 	@if exist $(BIN_DIR) rmdir /S /Q $(BIN_DIR)

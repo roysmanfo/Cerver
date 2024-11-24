@@ -24,6 +24,7 @@
 - Uses `HTTP/1.1` which is quite old 
 - Supports only GET requests
 - Lack of protection against certain malformed requests
+- Gets confused when sending binary data, like images (only svg files are supported)
 - Server may need to be terminated with task manager (idk why it persists, may be a thread)
 - Windows only (relies heavily on the Win32 API)
 
